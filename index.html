@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encuesta de Satisfacción - Renta de Camionetas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #2980b9, #6dd5fa);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: white;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-top: 15px;
+      display: block;
+      color: #555;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      resize: vertical;
+      font-size: 14px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Encuesta de Satisfacción<br>Renta de Camionetas</h2>
+    <form action="https://formsubmit.co/TUCORREO@ejemplo.com" method="POST">
+      <!-- Cambia TUCORREO@ejemplo.com por tu correo -->
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="Nombre" required>
+
+      <label for="recorrido">¿Cuál fue tu recorrido?</label>
+      <input type="text" id="recorrido" name="Recorrido" required>
+
+      <label for="valor">¿Qué es lo que más valoras en un viaje?</label>
+      <textarea id="valor" name="Lo que más valora" required></textarea>
+
+      <label for="experiencia">¿Qué te pareció el viaje en general?</label>
+      <textarea id="experiencia" name="Experiencia general" required></textarea>
+
+      <label for="comodidad">¿Qué tan cómodo(a) fuiste durante el trayecto?</label>
+      <textarea id="comodidad" name="Comodidad del trayecto" required></textarea>
+
+      <label for="chofer">¿Qué opinión tienes sobre el chofer?</label>
+      <textarea id="chofer" name="Opinión sobre el chofer" required></textarea>
+
+      <label for="unidad">¿Cómo te pareció la unidad (camioneta)?</label>
+      <textarea id="unidad" name="Opinión sobre la unidad" required></textarea>
+
+      <label for="costo">¿El costo fue lo que esperabas? ¿Por qué?</label>
+      <textarea id="costo" name="Opinión sobre el costo" required></textarea>
+
+      <label for="mejoras">¿Qué sugerencias o mejoras nos darías?</label>
+      <textarea id="mejoras" name="Sugerencias" required></textarea>
+
+      <!-- Redirección y configuración FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://TUUSUARIO.github.io/gracias.html">
+
+      <button type="submit">Enviar respuestas</button>
+
+      <div class="footer">
+        ¡Gracias por tomarte el tiempo para ayudarnos a mejorar!
+      </div>
+    </form>
+  </div>
+</body>
+</html>
