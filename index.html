@@ -3,62 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Encuesta de Satisfacción - Renta de Camionetas</title>
+  <title>Tu opinión cuenta - Transvehi</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #2980b9, #6dd5fa);
+      background: linear-gradient(to right, #1CB5E0, #000851);
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
     .container {
-      background-color: white;
-      max-width: 700px;
+      background-color: #fff;
+      max-width: 750px;
       margin: 50px auto;
       padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
       text-align: center;
-      color: #333;
+      color: #007bff;
       margin-bottom: 30px;
     }
 
     label {
-      font-weight: 500;
-      margin-top: 15px;
+      font-weight: 600;
       display: block;
-      color: #555;
+      margin-top: 20px;
     }
 
-    input, textarea {
+    input, select, textarea {
       width: 100%;
       padding: 12px;
-      border-radius: 8px;
+      margin-top: 8px;
       border: 1px solid #ccc;
-      margin-top: 5px;
-      margin-bottom: 20px;
-      resize: vertical;
-      font-size: 14px;
+      border-radius: 10px;
+      font-size: 15px;
     }
 
     textarea {
-      height: 100px;
+      resize: vertical;
+      min-height: 80px;
     }
 
     button {
       background-color: #007bff;
       color: white;
       padding: 15px;
-      font-size: 16px;
+      font-size: 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       width: 100%;
+      margin-top: 30px;
+      transition: background 0.3s ease;
     }
 
     button:hover {
@@ -67,52 +72,89 @@
 
     .footer {
       text-align: center;
-      font-size: 12px;
-      color: #888;
-      margin-top: 20px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 25px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Encuesta de Satisfacción<br>Renta de Camionetas</h2>
+    <h2>Queremos conocer tu experiencia con Transvehi 🚐</h2>
     <form action="https://formsubmit.co/transvehi@gmail.com" method="POST">
 
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="Nombre" required>
+      <label for="nombre">Tu nombre completo</label>
+      <input type="text" id="nombre" name="Nombre" placeholder="Ej. Juan Pérez" required>
 
-      <label for="recorrido">¿Cuál fue tu recorrido?</label>
-      <input type="text" id="recorrido" name="Recorrido" required>
+      <label for="recorrido">¿Qué ruta o destino recorriste con nosotros?</label>
+      <input type="text" id="recorrido" name="Recorrido" placeholder="Ej. CDMX - Puebla" required>
 
-      <label for="valor">¿Qué es lo que más valoras en un viaje?</label>
-      <textarea id="valor" name="Lo que más valora" required></textarea>
+      <label for="valor">¿Qué fue lo que más te gustó del servicio?</label>
+      <select id="valor" name="Aspecto favorito" required>
+        <option value="">Selecciona una opción</option>
+        <option>La puntualidad</option>
+        <option>La atención del chofer</option>
+        <option>La comodidad de la unidad</option>
+        <option>El precio</option>
+        <option>Otro</option>
+      </select>
 
-      <label for="experiencia">¿Qué te pareció el viaje en general?</label>
-      <textarea id="experiencia" name="Experiencia general" required></textarea>
+      <label for="experiencia">¿Cómo calificarías tu experiencia general?</label>
+      <select id="experiencia" name="Calificación general" required>
+        <option value="">Selecciona una opción</option>
+        <option>Excelente</option>
+        <option>Buena</option>
+        <option>Regular</option>
+        <option>Mala</option>
+      </select>
 
-      <label for="comodidad">¿Qué tan cómodo(a) fuiste durante el trayecto?</label>
-      <textarea id="comodidad" name="Comodidad del trayecto" required></textarea>
+      <label for="comodidad">¿Qué tan cómodo(a) viajaste?</label>
+      <select id="comodidad" name="Comodidad del trayecto" required>
+        <option value="">Selecciona una opción</option>
+        <option>Muy cómodo(a)</option>
+        <option>Cómodo(a)</option>
+        <option>Regular</option>
+        <option>Incómodo(a)</option>
+      </select>
 
-      <label for="chofer">¿Qué opinión tienes sobre el chofer?</label>
-      <textarea id="chofer" name="Opinión sobre el chofer" required></textarea>
+      <label for="chofer">¿Cómo calificarías la atención del chofer?</label>
+      <select id="chofer" name="Chofer" required>
+        <option value="">Selecciona una opción</option>
+        <option>Excelente</option>
+        <option>Buena</option>
+        <option>Regular</option>
+        <option>Mala</option>
+      </select>
 
-      <label for="unidad">¿Cómo te pareció la unidad (camioneta)?</label>
-      <textarea id="unidad" name="Opinión sobre la unidad" required></textarea>
+      <label for="unidad">¿Cómo describirías la unidad en la que viajaste?</label>
+      <select id="unidad" name="Unidad" required>
+        <option value="">Selecciona una opción</option>
+        <option>Muy limpia y moderna</option>
+        <option>En buen estado</option>
+        <option>Necesita mejoras</option>
+        <option>Mal estado</option>
+      </select>
 
-      <label for="costo">¿El costo fue lo que esperabas? ¿Por qué?</label>
-      <textarea id="costo" name="Opinión sobre el costo" required></textarea>
+      <label for="costo">¿El costo del servicio te pareció adecuado?</label>
+      <select id="costo" name="Costo" required>
+        <option value="">Selecciona una opción</option>
+        <option>Muy accesible</option>
+        <option>Adecuado</option>
+        <option>Un poco caro</option>
+        <option>Muy caro</option>
+      </select>
 
-      <label for="mejoras">¿Qué sugerencias o mejoras nos darías?</label>
-      <textarea id="mejoras" name="Sugerencias" required></textarea>
+      <label for="mejoras">¿Qué sugerencia o mejora nos podrías dar?</label>
+      <textarea id="mejoras" name="Sugerencias" placeholder="Tu opinión nos ayuda a mejorar" required></textarea>
 
-      <!-- Redirección y configuración FormSubmit -->
+      <!-- Configuración de FormSubmit -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://transvehi-web.github.io/Encuesta-de-Satisfacci-n/gracias.html">
 
-      <button type="submit">Enviar respuestas</button>
+      <button type="submit">Enviar encuesta</button>
 
       <div class="footer">
-        ¡Gracias por tomarte el tiempo para ayudarnos a mejorar!
+        ¡Gracias por tu tiempo! 💙 Tu opinión nos ayuda a mejorar cada viaje.
       </div>
     </form>
   </div>
